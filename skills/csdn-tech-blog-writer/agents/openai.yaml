@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSDN Tech Blog Writer"
+  short_description: "Generate CSDN-style technical blog drafts"
+  default_prompt: "Use $csdn-tech-blog-writer to analyze my code or topic and draft a CSDN-ready technical blog."
