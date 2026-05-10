@@ -1,77 +1,144 @@
-# Contributing
+# 贡献指南
 
-Thanks for contributing to `javale`.
+感谢你愿意为 `javale` 贡献内容。
 
-## Scope
+这个仓库主要维护 Codex 本地 skills，目前重点是 `csdn-tech-blog-writer`。仓库内容不追求“多而杂”，更看重能不能在真实写作场景里稳定产出高质量结果。
 
-This repository is for Codex skills and supporting materials.
+## 贡献范围
 
-Please keep contributions focused on:
+欢迎贡献下面这些内容：
 
-- skills
-- templates
-- quality checklists
-- examples
-- installation and usage documentation
+- 新增或优化 skill
+- 改进 `SKILL.md` 的触发规则、写作策略和输出规范
+- 补充项目博客、知识点博客、风格适配等模板
+- 完善质量检查清单
+- 添加真实可复制的提示词示例
+- 优化安装、使用、维护文档
 
-## Repository Conventions
+暂时不建议提交下面这些内容：
 
-### Skill layout
+- 和 Codex skills 无关的普通脚本
+- 只改排版但不提升可用性的批量提交
+- 没有真实使用场景支撑的低质量模板
+- 会泄露账号、Token、密钥、手机号、邮箱等敏感信息的材料
 
-Each skill should live under `skills/<skill-name>/` and should usually contain:
+## 仓库结构约定
 
-- `SKILL.md`
-- `README.md`
-- optional `templates/`
-- optional `checklists/`
-- optional `agents/`
+每个 skill 都应放在 `skills/<skill-name>/` 目录下。
 
-### Naming
+推荐结构如下：
 
-- use lower-case kebab-case for skill folders
-- keep names descriptive and specific
-- prefer action-oriented names over vague names
+```text
+skills/
+  <skill-name>/
+    SKILL.md
+    README.md
+    templates/
+    checklists/
+    agents/
+```
 
-### Documentation
+各文件职责：
 
-Every skill contribution should explain:
+- `SKILL.md`：skill 的核心规则，包含角色、触发场景、输入要求、输出规范和安全要求。
+- `README.md`：面向使用者的说明文档，解释这个 skill 是什么、怎么安装、怎么调用。
+- `templates/`：可复用的文章结构、输出结构或工作流模板。
+- `checklists/`：生成前后的质量检查清单。
+- `agents/`：Codex 环境中可能会读取的元数据。
 
-- what the skill is for
-- when to use it
-- what inputs work best
-- what outputs to expect
-- at least 3 realistic prompt examples
+## 命名规范
 
-### Examples
+- skill 文件夹使用小写短横线命名，例如 `csdn-tech-blog-writer`。
+- 名称要具体，能看出用途。
+- 优先使用“动作 + 对象”的命名方式，例如 `tech-blog-writer`、`code-reviewer`。
+- 避免使用过于宽泛的名字，例如 `helper`、`assistant`、`tool`。
 
-Example prompts should be:
+## 文档要求
 
-- realistic
-- directly copyable
-- specific about desired output
-- consistent with the skill's actual behavior
+每个 skill 的说明文档建议至少包含：
 
-## Quality Bar
+- 这个 skill 解决什么问题
+- 适合在哪些场景使用
+- 最推荐提供哪些输入材料
+- 能生成哪些类型的输出
+- 至少 3 个真实可复制的提示词
+- 安装方式和注意事项
+- 质量标准和安全要求
 
-Before opening a contribution, make sure:
+文档写作上尽量做到：
 
-- repository docs still match actual files
-- example prompts still make sense
-- references to templates and checklists are valid
-- no secrets, tokens, or personal data are committed
-- content is original or properly authored for this repo
+- 直接说明用途，不堆概念
+- 示例可以复制后直接使用
+- 目录结构和实际文件保持一致
+- 链接路径真实有效
+- 中文技术表达清楚，不夹杂不必要的英文说明
 
-## Pull Request Guidance
+## Skill 质量标准
 
-Prefer small, understandable changes.
+提交或修改 skill 前，请检查：
 
-A good PR usually includes:
+- 是否有明确的触发场景
+- 是否能指导 Codex 先读取核心材料再生成内容
+- 是否避免生成空泛概述
+- 是否规定了输出结构和质量标准
+- 是否有处理信息不足时的补问策略
+- 是否有安全与隐私要求
+- 是否提供了模板或检查清单来保证稳定输出
 
-- what changed
-- why it changed
-- any new files added
-- any behavior or documentation assumptions
+以 `csdn-tech-blog-writer` 为例，项目类博客必须能做到：
 
-## License
+- 按小功能拆分内容
+- 展示 Controller、Service、Mapper 三层代码
+- 每段代码后有文字说明
+- 复杂功能后有知识点解析
+- 结合用户自己的代码原创生成
+- 不复制、不洗稿、不编造项目里不存在的功能
 
-By contributing, you agree that your contribution will be released under the MIT License in this repository.
+## 示例要求
+
+提示词示例应该满足：
+
+- 真实可用
+- 可以直接复制
+- 明确指定输入材料
+- 明确指定输出类型
+- 和 skill 的实际能力一致
+
+示例：
+
+```text
+[$csdn-tech-blog-writer] 请根据这个 Spring Boot + MyBatis 项目的 Controller、Service、Mapper 和 Mapper XML，生成一篇 CSDN 项目实战博客，要求按小功能拆分并讲解三层架构代码。
+```
+
+## 提交前检查
+
+提交前建议执行下面的人工检查：
+
+- README 是否仍然符合当前仓库结构
+- `SKILL.md` 中引用的模板和清单是否真实存在
+- 示例提示词是否和 skill 能力匹配
+- Markdown 标题层级是否清晰
+- 是否没有提交密钥、Token、真实手机号、邮箱、身份证号等敏感信息
+- 新增内容是否为原创，或明确来自本仓库维护者编写
+
+## Pull Request 建议
+
+建议保持每次 PR 小而清楚。
+
+一个好的 PR 通常会说明：
+
+- 改了什么
+- 为什么要改
+- 影响哪些文件
+- 是否新增模板、示例或检查清单
+- 是否改变了 skill 的生成行为
+
+如果是优化写作效果，建议附上一段简短说明：
+
+- 原来的问题是什么
+- 修改后希望改善什么
+- 适合用什么提示词验证
+
+## 许可证
+
+向本仓库贡献内容，即表示你同意该贡献内容按照本仓库的 [MIT License](LICENSE) 发布。
