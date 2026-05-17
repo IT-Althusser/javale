@@ -1,8 +1,8 @@
-# Sample Inputs
+# 示例输入
 
-These examples show the kind of source material that works well with `csdn-tech-blog-writer`.
+这些示例展示了哪些类型的素材更适合配合 `csdn-tech-blog-writer` 使用。
 
-## Minimal Knowledge-Point Input
+## 最小化知识点输入
 
 ```java
 public class UserContextHolder {
@@ -22,48 +22,48 @@ public class UserContextHolder {
 }
 ```
 
-Use this when you want a focused article about one mechanism.
+当你只想围绕某一个机制写一篇聚焦型文章时，可以使用这种输入方式。
 
-## Project-Oriented Input Set
+## 面向项目的输入组合
 
-A strong project-blog request often includes:
+一个比较完整的项目博客请求，通常会包含：
 
 - `pom.xml`
 - `src/main/resources/application.yml`
-- one `Controller`
-- one `Service`
-- one `Mapper`
-- one entity or DTO
-- one SQL schema or table definition
+- 一个 `Controller`
+- 一个 `Service`
+- 一个 `Mapper`
+- 一个实体类或 DTO
+- 一份 SQL 结构或数据表定义
 
-## Style-Learning Input Set
+## 风格学习输入组合
 
-For style-adaptive writing, provide:
+如果你希望生成的文章贴近你自己的写作风格，可以提供：
 
-- 1 to 3 older blog posts
-- or one article draft that clearly reflects your own structure and tone
+- 1 到 3 篇你以前写过的博客
+- 或者一篇能明显体现你结构和语气风格的文章草稿
 
-Good style samples should contain:
+比较好的风格样本通常应包含：
 
-- titles
-- intro paragraphs
-- section structure
-- code explanation style
-- conclusion style
+- 标题写法
+- 开头引入段落
+- 分节结构
+- 代码讲解方式
+- 结尾总结风格
 
-## Good Request Pattern
+## 一个不错的提问方式
 
 ```text
-Here is my Spring Boot project.
-Please use $csdn-tech-blog-writer to generate a CSDN-ready article.
-I want a project-practice style post.
-Please focus on user login, JWT auth, interceptor flow, and MyBatis data access.
+这是我的 Spring Boot 项目。
+请使用 $csdn-tech-blog-writer 帮我生成一篇可以直接发布到 CSDN 的文章。
+我希望文章风格偏项目实战。
+请重点讲解用户登录、JWT 认证、拦截器执行流程，以及 MyBatis 数据访问。
 ```
 
-## Better Request Pattern
+## 一个更好的提问方式
 
 ```text
-Here is my Spring Boot project and two old blog posts I wrote.
-Use $csdn-tech-blog-writer to generate a full CSDN article in my writing style.
-Please avoid generic filler, explain the actual code flow, and keep the title style close to my old posts.
+这是我的 Spring Boot 项目，以及我以前写过的两篇博客。
+请使用 $csdn-tech-blog-writer 按照我的写作风格生成一篇完整的 CSDN 文章。
+请避免空泛套话，重点解释真实代码执行流程，并让标题风格尽量接近我以前的文章。
 ```
