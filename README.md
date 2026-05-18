@@ -1,6 +1,6 @@
-# javale
+# csdn-writer-skills
 
-`javale` 是一个面向 Codex 的本地 skills 仓库，目前主要用于辅助生成中文技术博客，尤其适合 Java、Spring Boot、MyBatis、MySQL 等后端项目的 CSDN 写作场景。
+`csdn-writer-skills` 是一个面向 Codex 的本地 skills 仓库，目前主要用于辅助生成中文技术博客，尤其适合 Java、Spring Boot、MyBatis、MySQL 等后端项目的 CSDN 写作场景。
 
 这个仓库当前包含一个可直接使用的 skill：
 
@@ -23,7 +23,7 @@
 ## 目录结构
 
 ```text
-javale/
+csdn-writer-skills/
   skills/
     csdn-tech-blog-writer/
       agents/                 # Codex 相关元数据
@@ -59,8 +59,8 @@ javale/
 ### 1. 克隆仓库
 
 ```powershell
-git clone https://github.com/IT-Althusser/javale.git
-cd javale
+git clone https://github.com/IT-Althusser/csdn-writer-skills.git
+cd csdn-writer-skills
 ```
 
 ### 2. 复制 skill 到 Codex 本地 skills 目录

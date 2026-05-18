@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你愿意为 `javale` 贡献内容。
+感谢你愿意为 `csdn-writer-skills` 贡献内容。
 
 这个仓库主要维护 Codex 本地 skills，目前重点是 `csdn-tech-blog-writer`。仓库内容不追求“多而杂”，更看重能不能在真实写作场景里稳定产出高质量结果。
 
